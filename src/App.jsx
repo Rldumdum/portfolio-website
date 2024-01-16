@@ -1,19 +1,47 @@
 import { useState } from "react";
 import "./App.css";
 import Box from "./components/Box";
+import Box2 from "./components/Box2";
 
 let items = [
   { id: 1, title: "About Me" },
-  { id: 2, title: "Tech Stack" },
+  { id: 2, title: "Tech" },
   { id: 3, title: "Experiences & Education" },
+];
+
+const projects = [
+  { id: 1, src: "/images/Memory-game-mockup.png", title: "Memory Game" },
+  {
+    id: 2,
+    src: "/images/New-year-countdown-mockup.png",
+    title: "New Year Countdown",
+  },
+];
+
+const languages = [
+  { id: 1, title: "Javascript", src: "/images/languages/js.png" },
+  { id: 2, title: "React Native", src: "/images/languages/react-native.png" },
+  { id: 3, title: "Node Js", src: "/images/languages/nodejs.png" },
+  { id: 4, title: "Express Js", src: "/images/languages/express.png" },
+  { id: 5, title: "Expo", src: "/images/languages/expo.png" },
+  { id: 6, title: "MySql", src: "/images/languages/mysql.png" },
+  { id: 7, title: "Php", src: "/images/languages/php.png" },
+  { id: 8, title: "Postman", src: "/images/languages/postman.png" },
+  { id: 9, title: "Html5", src: "/images/languages/html-5.png" },
+  { id: 10, title: "Css3", src: "/images/languages/css-3.png" },
+  { id: 11, title: "Sass", src: "/images/languages/sass.png" },
+  { id: 12, title: "Python", src: "/images/languages/python.png" },
+  { id: 13, title: "Django", src: "/images/languages/django.jpg" },
 ];
 
 function App() {
   const [isHover, setIsHover] = useState();
+  const [opacity, setOpacity] = useState(0);
+  const [projectHover, setProjectHover] = useState();
 
   console.log(isHover);
   return (
-    <div>
+    <div className="pb-96">
       <div className="hero flex p-20 ">
         <div className="left flex-1  ">
           <div className="w-3/4 ">
@@ -25,19 +53,16 @@ function App() {
               SOFTWARE DEVELOPER
             </h3>
             <p className="text-2xl mt-10 w-[800px] tracking-wider ">
-              My mission is to help you build your projects with my versatility
-              and my ability to adapt to different situations. Together, let's
-              turn your ideas into great projects!
+              My aim is to use my diverse skills to assist you with your
+              projects. I can certainly bring your ideas to life and achieve
+              great things!
             </p>
           </div>
         </div>
         <div className="right flex-1 ml-36">
           <img src="/images/myPhoto.png" alt="RL DUMDUM" width={450} />
           <div className="bg-black w-full h-0.5 relative right-20" />
-          <button
-            className="bg-black text-white mt-10 py-10 px-20 "
-            onClick={() => setIsHover(3)}
-          >
+          <button className="bg-black text-white mt-10 py-10 px-20 ">
             <p className=" text-3xl">View My Work</p>
           </button>
         </div>
@@ -48,38 +73,163 @@ function App() {
           <li
             key={item.id}
             className={
-              " h-96 bg-black rounded-3xl transition-all duration-1000 ease-in-out flex  items-center justify-center " +
-              (isHover === item.id ? "w-full flex-col " : isHover ? "w-1/4 " : "w-full ")
+              " h-96 bg-black rounded-3xl transition-all duration-1000 ease-in-out flex items-center justify-center " +
+              (isHover === item.id
+                ? "w-full flex-col "
+                : isHover
+                ? "w-1/4 "
+                : "w-full ")
             }
             onMouseEnter={() => {
               setIsHover(item.id);
             }}
             onMouseLeave={() => {
               setIsHover(null);
+              setOpacity(0);
             }}
           >
             <h1
               className={
-                "text-center justify-center transition-all duration-700 ease-in out text-white relative top-0 " +
+                "text-center justify-center transition-all duration-700 ease-in-out text-white relative  " +
                 (isHover === item.id
-                  ? "text-sm -top-36 "
+                  ? " text-sm -top-36 "
                   : isHover
-                  ? " text-5xl blur-sm"
-                  : "text-7xl")
+                  ? " text-5xl blur-sm top-0"
+                  : " text-7xl top-0 ")
               }
             >
               {item.title}
             </h1>
-            {isHover === item.id && item.title === "About Me" && (
-              <div className="bg-red-500">
-                <p>Hello My name is rl dumum</p>
-
+            {isHover === item.id && item.title === "About Me" ? (
+              <div
+                onMouseEnter={() => setOpacity(100)}
+                onMouseLeave={() => setOpacity(0)}
+                className={
+                  `w-6/12 h-72 mt-10 absolute transition-all duration-1000 delay-150 cursor-crosshair ease-in-out ` +
+                  (opacity === 100 ? "opacity-100" : "opacity-0")
+                }
+              >
+                <p className="text-xl  text-white leading-relaxed">
+                  Hi, Let me introduce myself again. <br /> <br />
+                  My name is RL. I am a passionate person, willing to learn new
+                  things and rethink my learnings. Growing up as a curious kid,
+                  I used to play lots of video games. I always wonder what goes
+                  behind the creation of each thing. I brought that attitude
+                  with me through adulthood and now learning a lot of
+                  technologies and specializing in web development. I went to
+                  college for 1 year then I stopped, and decided to self-learn
+                  everything. I also went to a coding boot camp and got an
+                  internship and that's where my professional coding journey
+                  begins.
+                </p>
               </div>
-            )
-            }
+            ) : isHover === item.id && item.title === "Tech" ? (
+              <div
+                onMouseEnter={() => setOpacity(100)}
+                onMouseLeave={() => setOpacity(0)}
+                className={`w-4/12 h-72 mt-10  place-items-center grid grid-cols-5 absolute cursor-crosshair transition-all duration-1000 delay-150 ease-in-out opacity-${opacity} `}
+              >
+                {languages.map((language) => (
+                  <div key={language.id} className="bg-white p-3 rounded-3xl">
+                    <img
+                      src={language.src}
+                      alt={language.title}
+                      className="w-14 h-14 rounded-xl "
+                    />
+                  </div>
+                ))}
+              </div>
+            ) : isHover === item.id &&
+              item.title === "Experiences & Education" ? (
+              <div
+                onMouseEnter={() => setOpacity(100)}
+                onMouseLeave={() => setOpacity(0)}
+                className={`w-6/12 h-72 mt-10 bg-slate-500 absolute transition-all cursor-crosshair duration-1000 delay-150 ease-in-out opacity-${opacity} `}
+              ></div>
+            ) : (
+              ""
+            )}
           </li>
         ))}
       </ul>
+      <div>
+        {/* projects */}
+        <Box2 />
+        <div className="block text-center justify-center">
+          <h1 className="text-black w-full mb-16 text-9xl">Projects</h1>
+          <div className="grid grid-cols-2 gap-10 justify-center items-center place-items-center w-full">
+            <div className="w-6/12 place-self-end ">
+              <img
+                alt={projects[0].title}
+                src={projects[0].src}
+                className={
+                  "rounded-3xl h-[300px] transition-all duration-500 " +
+                  (projectHover === projects[0].title
+                    ? "scale-110"
+                    : "scale-100")
+                }
+                style={{ objectFit: "cover" }}
+                onMouseEnter={(e) => {
+                  setProjectHover(e.target.alt);
+                }}
+                onMouseLeave={() => {
+                  setProjectHover(null);
+                }}
+              />
+              <p className="text-2xl  mt-5 text-black">{projects[0].title}</p>
+            </div>
+            <div className="w-6/12  place-self-start">
+              <img
+                alt={projects[1].title}
+                src={projects[1].src}
+                className={
+                  "rounded-3xl h-[300px] transition-all duration-500 " +
+                  (projectHover === projects[1].title
+                    ? "scale-110"
+                    : "scale-100")
+                }
+                style={{ objectFit: "cover" }}
+                onMouseEnter={(e) => {
+                  setProjectHover(e.target.alt);
+                }}
+                onMouseLeave={() => {
+                  setProjectHover(null);
+                }}
+              />
+              <p className="text-2xl mt-5 text-black">{projects[1].title}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="grid justify-center">
+        <h1 className="text-black text-9xl mt-20">Contact</h1>
+        <div className="">
+          <form className="grid mt-5" method="POST">
+            <label htmlFor="fullname">Full Name:</label>
+            <input
+              type="text"
+              name="fullname"
+              id="fullname"
+              className="border border-black rounded"
+            />
+            <label htmlFor="email">Email:</label>
+            <input
+              type="text"
+              name="email"
+              id="email"
+              className="border border-black rounded"
+            />
+            <label htmlFor="message">Message:</label>
+            <textarea
+              type="text"
+              name="message"
+              id="message"
+              className="border border-black min-h-44 rounded"
+            />
+            <button className="mt-5">Submit</button>
+          </form>
+        </div>
+      </div>
     </div>
   );
 }

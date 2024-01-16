@@ -14,7 +14,7 @@ const Box = () => {
 
   return (
     <div className="flex mx-20 mt-10 ">
-      <div className="box-bg" />
+      <div className="box-bg bg-gradient-to-r from-black to-white" />
       <div className="box w-16 h-16 border-black border " />
       <div className="box w-16 h-16 border-black border " />
       <div className="box w-16 h-16 border-black border " />
