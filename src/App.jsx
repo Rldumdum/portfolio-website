@@ -3,47 +3,17 @@ import "./App.css";
 import Box from "./components/Box";
 import Box2 from "./components/Box2";
 import HoverVideoPlayer from "react-hover-video-player";
+import * as data from "./data";
 
-let items = [
-  { id: 1, title: "About Me" },
-  { id: 2, title: "Tech" },
-  { id: 3, title: "Experiences & Education" },
-];
-
-const projects = [
-  { id: 1, src: "/images/Memory-game-mockup.png", title: "Memory Game" },
-  {
-    id: 2,
-    src: "/images/New-year-countdown-mockup.png",
-    title: "New Year Countdown",
-  },
-];
-
-const languages = [
-  { id: 1, title: "Javascript", src: "/images/languages/js.png" },
-  { id: 2, title: "React Native", src: "/images/languages/react-native.png" },
-  { id: 3, title: "Next Js", src: "/images/languages/next-js.svg" },
-  { id: 4, title: "Node Js", src: "/images/languages/nodejs.png" },
-  { id: 5, title: "Express Js", src: "/images/languages/express.png" },
-  { id: 6, title: "Expo", src: "/images/languages/expo.png" },
-  { id: 7, title: "MySql", src: "/images/languages/mysql.png" },
-  { id: 8, title: "Php", src: "/images/languages/php.png" },
-  { id: 9, title: "Postman", src: "/images/languages/postman.png" },
-  { id: 10, title: "Html5", src: "/images/languages/html-5.png" },
-  { id: 11, title: "Css3", src: "/images/languages/css-3.png" },
-  { id: 12, title: "Sass", src: "/images/languages/sass.png" },
-  { id: 13, title: "Python", src: "/images/languages/python.png" },
-  { id: 14, title: "Django", src: "/images/languages/django.jpg" },
-];
+const { items, projects, languages } = data;
 
 function App() {
   const [isHover, setIsHover] = useState();
   const [opacity, setOpacity] = useState(0);
-  const [projectHover, setProjectHover] = useState();
 
   console.log(isHover);
   return (
-    <div className="pb-96 ">
+    <div className="pb-96  " id="hero">
       <div className="hero flex max-w-16 items-center justify-center m-auto p-20 ">
         <div className=" flex-1  ">
           <div className="w-3/4 ">
@@ -70,7 +40,7 @@ function App() {
         </div>
       </div>
       <Box />
-      <ul className="infos flex px-36 pb-36 gap-4  ">
+      <ul className="infos flex px-36 pb-36 gap-4  " id="abte">
         {items.map((item) => (
           <li
             key={item.id}
@@ -92,12 +62,12 @@ function App() {
           >
             <h1
               className={
-                "text-center justify-center transition-all duration-700 ease-in-out text-white relative  " +
+                "  text-center justify-center transition-all duration-700 ease-in-out text-white relative  " +
                 (isHover === item.id
                   ? " text-sm -top-36 "
                   : isHover
                   ? " text-5xl blur-sm top-0"
-                  : " text-7xl top-0 ")
+                  : " xl:text-4xl 2xl:text-7xl top-0 ")
               }
             >
               {item.title}
@@ -107,11 +77,11 @@ function App() {
                 onMouseEnter={() => setOpacity(100)}
                 onMouseLeave={() => setOpacity(0)}
                 className={
-                  `w-6/12 h-72 mt-10 absolute transition-all duration-1000 delay-150 cursor-crosshair ease-in-out ` +
+                  `xl:w-5/12 2xl:w-6/12 h-72 mt-10 absolute transition-all duration-1000 delay-150 cursor-crosshair ease-in-out ` +
                   (opacity === 100 ? "opacity-100" : "opacity-0 ")
                 }
               >
-                <p className="text-xl  text-white leading-relaxed">
+                <p className="xl:text-lg  2xl:text-xl  text-white leading-relaxed">
                   Hi, Let me introduce myself again. <br /> <br />
                   My name is RL. I am a passionate person, willing to learn new
                   things and rethink my learnings. Growing up as a curious kid,
@@ -144,11 +114,11 @@ function App() {
               <div
                 onMouseEnter={() => setOpacity(100)}
                 onMouseLeave={() => setOpacity(0)}
-                className={`w-6/12 h-72 mt-10  absolute transition-all cursor-crosshair duration-1000 delay-150 ease-in-out opacity-${opacity} `}
+                className={`xl:w-5/12 2xl:w-6/12 h-72 mt-10  absolute transition-all cursor-crosshair duration-1000 delay-150 ease-in-out opacity-${opacity} `}
               >
                 <p className="text-xl  text-white leading-relaxed">
-                  I went to college for 1 year then I stopped taking BSIT, and
-                  decided to self-learn everything. I also went to a coding boot
+                  I went to college for 2nd year then I stopped taking BSIT, and
+                  decided to self-learn everything on a fast-faced environment. I also went to a coding boot
                   camp and got an internship and that&apos;s where my
                   professional coding journey begins.
                   <span className="block mt-10 text-green-400">
@@ -166,7 +136,9 @@ function App() {
         {/* projects */}
         <Box2 />
         <div className="block text-center justify-center">
-          <h1 className="text-black w-full mb-16 text-9xl">Projects</h1>
+          <h1 className="text-black w-full mb-16 text-9xl" id="projects">
+            Projects
+          </h1>
           <div className="grid grid-cols-2 gap-10 justify-center items-center place-items-center w-full">
             <div className="w-6/12 place-self-end ">
               <div
@@ -204,7 +176,6 @@ function App() {
                     </span>
                   </a>
                 </div>
-
                 <div className="flex justify-center ">
                   <div className="w-10 h-10 bg-white shadow-black drop-shadow-xl rounded-full absolute z-50 bottom-2 pointer-events-none transition-all ">
                     <img
@@ -321,32 +292,51 @@ function App() {
         </div>
       </div>
       <div className="grid justify-center">
-        <h1 className="text-black text-9xl mt-20">Contact</h1>
-        <div className="">
-          <form className="grid mt-5" method="POST">
-            <label htmlFor="fullname">Full Name:</label>
-            <input
-              type="text"
-              name="fullname"
-              id="fullname"
-              className="border border-black rounded"
-            />
-            <label htmlFor="email">Email:</label>
-            <input
-              type="text"
-              name="email"
-              id="email"
-              className="border border-black rounded"
-            />
-            <label htmlFor="message">Message:</label>
-            <textarea
-              type="text"
-              name="message"
-              id="message"
-              className="border border-black min-h-44 rounded"
-            />
-            <button className="mt-5">Submit</button>
-          </form>
+        <h1
+          className="text-black text-9xl mt-20 place-self-center"
+          id="contact"
+        >
+          Contact
+        </h1>
+        <p className="text-slate-500 mt-5 mb-6">
+          Please Enter your information so I can speak with you and discuss
+          about what <br />
+          solution I can provide you
+        </p>
+        <div className="bg-neutral-500 p-5 rounded-xl">
+          <div className="">
+            <form className="grid mt-5" method="POST">
+              <label htmlFor="fullname" className="text-white">
+                Full Name:
+              </label>
+              <input
+                type="text"
+                name="fullname"
+                id="fullname"
+                className="border border-black rounded"
+              />
+              <label htmlFor="email" className="text-white">
+                Email:
+              </label>
+              <input
+                type="text"
+                name="email"
+                id="email"
+                className="border border-black rounded"
+              />
+              <label htmlFor="message" className="text-white">
+                Message:
+              </label>
+              <textarea
+                type="text"
+                name="message"
+                id="message"
+                className="border border-black min-h-44 rounded"
+                placeholder="I would like to schedule an interview with you for a project xyz"
+              />
+              <button className="mt-5">Submit</button>
+            </form>
+          </div>
         </div>
       </div>
     </div>

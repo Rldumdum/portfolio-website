@@ -9,12 +9,12 @@ const Box2 = () => {
   };
 
   return (
-    <div className="flex mx-20 mt-10 justify-center">
+    <div className="flex mx-20 mt-10 justify-center  ">
       <div
         className={
           "box-bg-2 transition-all duration-1000 ease-in-out " +
           (isVine
-            ? " bg-gradient-to-r from-green-200 to-green-400 opacity-100 w-[90vw]"
+            ? " bg-gradient-to-r from-green-200 to-green-400 opacity-100 w-[90.5%]"
             : " bg-gradient-to-r from-black to-white opacity-0 w-[0vw]")
         }
       />
@@ -25,7 +25,9 @@ const Box2 = () => {
         >
           <img
             src={powerUpUrl}
-            className={"absolute top-16 z-50 " + (!isVine ? "cursor-pointer" : "")}
+            className={
+              "absolute top-16 z-50 " + (!isVine ? "cursor-pointer" : "")
+            }
           />
           <img
             src="/images/vine.png"
