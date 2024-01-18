@@ -205,7 +205,13 @@ function App() {
                   </a>
                 </div>
 
-                <div>
+                <div className="flex justify-center ">
+                  <div className="w-10 h-10 bg-white shadow-black drop-shadow-xl rounded-full absolute z-50 bottom-2 pointer-events-none transition-all ">
+                    <img
+                      src="/images/pulsatingcircle.gif"
+                      className="rounded-full "
+                    />
+                  </div>
                   <HoverVideoPlayer
                     videoStyle={{ height: "300px", borderRadius: "1.5rem" }}
                     className="rounded-3xl transition-all duration-500"
@@ -232,7 +238,7 @@ function App() {
                         <div className="loading-spinner" />
                       </div>
                     }
-                  />
+                  ></HoverVideoPlayer>
                 </div>
               </div>
               <p className="text-2xl  mt-5 text-black">{projects[0].title}</p>
@@ -273,7 +279,13 @@ function App() {
                     </span>
                   </a>
                 </div>
-                <div>
+                <div className="flex justify-center ">
+                  <div className="w-10 h-10 bg-white shadow-black drop-shadow-xl rounded-full absolute z-50 bottom-2 pointer-events-none transition-all ">
+                    <img
+                      src="/images/pulsatingcircle.gif"
+                      className="rounded-full"
+                    />
+                  </div>
                   <HoverVideoPlayer
                     videoStyle={{ height: "300px", borderRadius: "1.5rem" }}
                     className="rounded-3xl transition-all duration-500"

@@ -55,14 +55,12 @@
 }
 
 .left-hover{
-  border-top-right-radius: 100px;
   border-bottom-right-radius: 100px;
   border-top-left-radius: 22px;
   border-bottom-left-radius: 22px;
 }
 
 .right-hover{
-  border-top-left-radius: 100px;
   border-bottom-left-radius: 100px;
   border-top-right-radius: 22px;
   border-bottom-right-radius: 22px;
