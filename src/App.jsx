@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import Box from "./components/Box";
 import Box2 from "./components/Box2";
+import HoverVideoPlayer from "react-hover-video-player";
 
 let items = [
   { id: 1, title: "About Me" },
@@ -173,32 +174,66 @@ function App() {
                   "relative hover:scale-110  transition-all duration-500 "
                 }
               >
-                <div className="left-hover absolute z-40 w-1/2 left h-full  transition-all duration-1000 bg-black bg-opacity-0 opacity-0 hover:bg-opacity-60 hover:opacity-100 flex items-center justify-center ">
-                  <span className=" text-white justify-center items-center flex flex-col">
-                    <img
-                      src="/images/github.svg"
-                      width={40}
-                      className="mb-3"
-                    ></img>
-                    <p>Github Repo</p>
-                  </span>
+                <div className="left-hover absolute z-40 w-1/2 left h-full cursor-pointer  transition-all duration-1000 bg-black bg-opacity-0 opacity-0 hover:bg-opacity-60 hover:opacity-100 flex items-center justify-center ">
+                  <a
+                    href="https://github.com/Rldumdum/memory-game"
+                    className="p-12"
+                  >
+                    <span className=" text-white justify-center items-center flex flex-col">
+                      <img
+                        src="/images/github.svg"
+                        width={40}
+                        className="mb-3"
+                      ></img>
+                      <p>Github Repo</p>
+                    </span>
+                  </a>
                 </div>
-                <div className="right-hover absolute right-0  z-40 w-1/2 h-full transition-all duration-1000 bg-slate-500 bg-opacity-0 opacity-0 hover:bg-opacity-60 hover:opacity-100 flex items-center justify-center">
-                  <span className=" text-white justify-center items-center flex flex-col">
-                    <img
-                      src="/images/demo.svg"
-                      width={40}
-                      className="mb-3"
-                    ></img>
-                    <p>Live Demo</p>
-                  </span>
+                <div className="right-hover absolute right-0  z-40 w-1/2 h-full cursor-pointer transition-all duration-1000 bg-slate-500 bg-opacity-0 opacity-0 hover:bg-opacity-60 hover:opacity-100 flex items-center justify-center">
+                  <a
+                    href="https://rldumdum.github.io/memory-game/"
+                    className="p-12"
+                  >
+                    <span className=" text-white justify-center items-center flex flex-col">
+                      <img
+                        src="/images/demo.svg"
+                        width={40}
+                        className="mb-3"
+                      ></img>
+                      <p>Live Demo</p>
+                    </span>
+                  </a>
                 </div>
-                <img
-                  alt={projects[0].title}
-                  src={projects[0].src}
-                  className="rounded-3xl h-[300px] transition-all duration-500 "
-                  style={{ objectFit: "cover" }}
-                />
+
+                <div>
+                  <HoverVideoPlayer
+                    videoStyle={{ height: "300px", borderRadius: "1.5rem" }}
+                    className="rounded-3xl transition-all duration-500"
+                    videoSrc="/video/memory-game.mp4"
+                    pausedOverlay={
+                      <img
+                        src={projects[0].src}
+                        alt=""
+                        style={{
+                          // Make the image expand to cover the video's dimensions
+                          width: "100%",
+                          height: "100%",
+                          objectFit: "cover",
+                          borderRadius: "1.5rem",
+                        }}
+                      />
+                    }
+                    pausedOverlayWrapperStyle={{
+                      borderRadius: "1.5rem",
+                    }}
+                    objectFit="cover"
+                    loadingOverlay={
+                      <div className="loading-overlay">
+                        <div className="loading-spinner" />
+                      </div>
+                    }
+                  />
+                </div>
               </div>
               <p className="text-2xl  mt-5 text-black">{projects[0].title}</p>
             </div>
@@ -208,34 +243,63 @@ function App() {
                   "relative hover:scale-110 transition-all duration-500 "
                 }
               >
-                <div className="left-hover absolute z-40 w-1/2 left h-full  transition-all duration-1000 bg-black bg-opacity-0 opacity-0 hover:bg-opacity-60 hover:opacity-100 flex items-center justify-center ">
-                  <span className=" text-white justify-center items-center flex flex-col">
-                    <img
-                      src="/images/github.svg"
-                      width={40}
-                      className="mb-3"
-                    ></img>
-                    <p>Github Repo</p>
-                  </span>
+                <div className="left-hover absolute z-40 w-1/2 left h-full cursor-pointer  transition-all duration-1000 bg-black bg-opacity-0 opacity-0 hover:bg-opacity-60 hover:opacity-100 flex items-center justify-center ">
+                  <a
+                    href="https://github.com/Rldumdum/new-year-countdown"
+                    className="p-12"
+                  >
+                    <span className=" text-white justify-center items-center flex flex-col">
+                      <img
+                        src="/images/github.svg"
+                        width={40}
+                        className="mb-3"
+                      ></img>
+                      <p>Github Repo</p>
+                    </span>
+                  </a>
                 </div>
-                <div className="right-hover absolute right-0  z-40 w-1/2 h-full transition-all duration-1000 bg-slate-500 bg-opacity-0 opacity-0 hover:bg-opacity-60 hover:opacity-100 flex items-center justify-center ">
-                  <span className=" text-white justify-center items-center flex flex-col">
-                    <img
-                      src="/images/demo.svg"
-                      width={40}
-                      className="mb-3"
-                    ></img>
-                    <p>Live Demo</p>
-                  </span>
+                <div className="right-hover absolute right-0  z-40 w-1/2 h-full cursor-pointer transition-all duration-1000 bg-slate-500 bg-opacity-0 opacity-0 hover:bg-opacity-60 hover:opacity-100 flex items-center justify-center ">
+                  <a
+                    href="https://thecountdown2024.vercel.app/"
+                    className="p-12"
+                  >
+                    <span className=" text-white justify-center items-center flex flex-col">
+                      <img
+                        src="/images/demo.svg"
+                        width={40}
+                        className="mb-3"
+                      ></img>
+                      <p>Live Demo</p>
+                    </span>
+                  </a>
                 </div>
-                <div className="bg-slate-800 rounded-3xl">
-                  <img
-                    alt={projects[1].title}
-                    src={projects[1].src}
-                    className={
-                      "rounded-3xl h-[300px] transition-all duration-500  "
+                <div>
+                  <HoverVideoPlayer
+                    videoStyle={{ height: "300px", borderRadius: "1.5rem" }}
+                    className="rounded-3xl transition-all duration-500"
+                    videoSrc="/video/new-year-countdown.mp4"
+                    pausedOverlay={
+                      <img
+                        src={projects[1].src}
+                        alt=""
+                        style={{
+                          // Make the image expand to cover the video's dimensions
+                          width: "100%",
+                          height: "100%",
+                          objectFit: "cover",
+                          borderRadius: "1.5rem",
+                        }}
+                      />
                     }
-                    style={{ objectFit: "cover" }}
+                    pausedOverlayWrapperStyle={{
+                      borderRadius: "1.5rem",
+                    }}
+                    objectFit="cover"
+                    loadingOverlay={
+                      <div className="loading-overlay">
+                        <div className="loading-spinner" />
+                      </div>
+                    }
                   />
                 </div>
               </div>
