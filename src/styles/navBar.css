@@ -1,0 +1,25 @@
+
+nav ul{
+  display:flex;
+  flex-direction: row;
+  flex-flow: row wrap;
+  align-items: center;
+  margin: 0 auto;
+  justify-content: center;
+}
+nav li:first-child{
+  flex-basis: 100%;
+  text-align: center;
+}
+
+@media (min-width: 850px){
+  nav{
+    max-width: 1200px;;
+    margin: 0 auto
+  }
+  nav li:first-child{
+    flex-basis: auto;
+    text-align: left;
+    margin-right: auto;
+  }
+}

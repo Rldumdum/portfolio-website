@@ -3,8 +3,6 @@
 @tailwind utilities;
 
 .box-bg {
- 
-
   display: flex;
   position: absolute;
   width: 90vw;
@@ -14,15 +12,12 @@
   mix-blend-mode: multiply;
 }
 .box-bg-2 {
- 
-
   display: flex;
   position: absolute;
   height: 4rem;
   z-index: 99;
   mix-blend-mode: multiply;
 }
-
 
 .mushroom {
   transition: all 0.5s ease-in-out;
@@ -55,6 +50,20 @@
   transition: all 1.5s ease-in-out;
   transform: translateX(0px);
   position: relative;
-  height:350px;
-  z-index:40;
+  height: 350px;
+  z-index: 40;
+}
+
+.left-hover{
+  border-top-right-radius: 100px;
+  border-bottom-right-radius: 100px;
+  border-top-left-radius: 22px;
+  border-bottom-left-radius: 22px;
+}
+
+.right-hover{
+  border-top-left-radius: 100px;
+  border-bottom-left-radius: 100px;
+  border-top-right-radius: 22px;
+  border-bottom-right-radius: 22px;
 }

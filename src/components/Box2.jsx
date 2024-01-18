@@ -9,7 +9,7 @@ const Box2 = () => {
   };
 
   return (
-    <div className="flex mx-20 mt-10 ">
+    <div className="flex mx-20 mt-10 justify-center">
       <div
         className={
           "box-bg-2 transition-all duration-1000 ease-in-out " +

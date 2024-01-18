@@ -21,17 +21,18 @@ const projects = [
 const languages = [
   { id: 1, title: "Javascript", src: "/images/languages/js.png" },
   { id: 2, title: "React Native", src: "/images/languages/react-native.png" },
-  { id: 3, title: "Node Js", src: "/images/languages/nodejs.png" },
-  { id: 4, title: "Express Js", src: "/images/languages/express.png" },
-  { id: 5, title: "Expo", src: "/images/languages/expo.png" },
-  { id: 6, title: "MySql", src: "/images/languages/mysql.png" },
-  { id: 7, title: "Php", src: "/images/languages/php.png" },
-  { id: 8, title: "Postman", src: "/images/languages/postman.png" },
-  { id: 9, title: "Html5", src: "/images/languages/html-5.png" },
-  { id: 10, title: "Css3", src: "/images/languages/css-3.png" },
-  { id: 11, title: "Sass", src: "/images/languages/sass.png" },
-  { id: 12, title: "Python", src: "/images/languages/python.png" },
-  { id: 13, title: "Django", src: "/images/languages/django.jpg" },
+  { id: 3, title: "Next Js", src: "/images/languages/next-js.svg" },
+  { id: 4, title: "Node Js", src: "/images/languages/nodejs.png" },
+  { id: 5, title: "Express Js", src: "/images/languages/express.png" },
+  { id: 6, title: "Expo", src: "/images/languages/expo.png" },
+  { id: 7, title: "MySql", src: "/images/languages/mysql.png" },
+  { id: 8, title: "Php", src: "/images/languages/php.png" },
+  { id: 9, title: "Postman", src: "/images/languages/postman.png" },
+  { id: 10, title: "Html5", src: "/images/languages/html-5.png" },
+  { id: 11, title: "Css3", src: "/images/languages/css-3.png" },
+  { id: 12, title: "Sass", src: "/images/languages/sass.png" },
+  { id: 13, title: "Python", src: "/images/languages/python.png" },
+  { id: 14, title: "Django", src: "/images/languages/django.jpg" },
 ];
 
 function App() {
@@ -41,9 +42,9 @@ function App() {
 
   console.log(isHover);
   return (
-    <div className="pb-96">
-      <div className="hero flex p-20 ">
-        <div className="left flex-1  ">
+    <div className="pb-96 ">
+      <div className="hero flex max-w-16 items-center justify-center m-auto p-20 ">
+        <div className=" flex-1  ">
           <div className="w-3/4 ">
             <h2 className="text-7xl text-black mt-10">HI! I am</h2>
             <h1 className="font-bold text-9xl text-black mt-5">
@@ -59,11 +60,11 @@ function App() {
             </p>
           </div>
         </div>
-        <div className="right flex-1 ml-36">
-          <img src="/images/myPhoto.png" alt="RL DUMDUM" width={450} />
-          <div className="bg-black w-full h-0.5 relative right-20" />
-          <button className="bg-black text-white mt-10 py-10 px-20 ">
-            <p className=" text-3xl">View My Work</p>
+        <div className="flex-1 ml-36">
+          <img src="/images/myPhoto.png" alt="RL DUMDUM" width={900} />
+          <div className="bg-black w-full h-0.5 relative" />
+          <button className="bg-black text-white mt-10 py-6 px-0 w-80 justify-center flex ">
+            <p className=" text-1xl">View My Work</p>
           </button>
         </div>
       </div>
@@ -106,7 +107,7 @@ function App() {
                 onMouseLeave={() => setOpacity(0)}
                 className={
                   `w-6/12 h-72 mt-10 absolute transition-all duration-1000 delay-150 cursor-crosshair ease-in-out ` +
-                  (opacity === 100 ? "opacity-100" : "opacity-0")
+                  (opacity === 100 ? "opacity-100" : "opacity-0 ")
                 }
               >
                 <p className="text-xl  text-white leading-relaxed">
@@ -116,11 +117,9 @@ function App() {
                   I used to play lots of video games. I always wonder what goes
                   behind the creation of each thing. I brought that attitude
                   with me through adulthood and now learning a lot of
-                  technologies and specializing in web development. I went to
-                  college for 1 year then I stopped, and decided to self-learn
-                  everything. I also went to a coding boot camp and got an
-                  internship and that's where my professional coding journey
-                  begins.
+                  technologies and specializing in web development. I dabble in
+                  a lot of technologies and I am always open to learning new
+                  things until now I never get tired of it.
                 </p>
               </div>
             ) : isHover === item.id && item.title === "Tech" ? (
@@ -144,8 +143,18 @@ function App() {
               <div
                 onMouseEnter={() => setOpacity(100)}
                 onMouseLeave={() => setOpacity(0)}
-                className={`w-6/12 h-72 mt-10 bg-slate-500 absolute transition-all cursor-crosshair duration-1000 delay-150 ease-in-out opacity-${opacity} `}
-              ></div>
+                className={`w-6/12 h-72 mt-10  absolute transition-all cursor-crosshair duration-1000 delay-150 ease-in-out opacity-${opacity} `}
+              >
+                <p className="text-xl  text-white leading-relaxed">
+                  I went to college for 1 year then I stopped taking BSIT, and
+                  decided to self-learn everything. I also went to a coding boot
+                  camp and got an internship and that&apos;s where my
+                  professional coding journey begins.
+                  <span className="block mt-10 text-green-400">
+                    See my resume for more details.
+                  </span>
+                </p>
+              </div>
             ) : (
               ""
             )}
@@ -159,43 +168,77 @@ function App() {
           <h1 className="text-black w-full mb-16 text-9xl">Projects</h1>
           <div className="grid grid-cols-2 gap-10 justify-center items-center place-items-center w-full">
             <div className="w-6/12 place-self-end ">
-              <img
-                alt={projects[0].title}
-                src={projects[0].src}
+              <div
                 className={
-                  "rounded-3xl h-[300px] transition-all duration-500 " +
-                  (projectHover === projects[0].title
-                    ? "scale-110"
-                    : "scale-100")
+                  "relative hover:scale-110  transition-all duration-500 "
                 }
-                style={{ objectFit: "cover" }}
-                onMouseEnter={(e) => {
-                  setProjectHover(e.target.alt);
-                }}
-                onMouseLeave={() => {
-                  setProjectHover(null);
-                }}
-              />
+              >
+                <div className="left-hover absolute z-40 w-1/2 left h-full  transition-all duration-1000 bg-black bg-opacity-0 opacity-0 hover:bg-opacity-60 hover:opacity-100 flex items-center justify-center ">
+                  <span className=" text-white justify-center items-center flex flex-col">
+                    <img
+                      src="/images/github.svg"
+                      width={40}
+                      className="mb-3"
+                    ></img>
+                    <p>Github Repo</p>
+                  </span>
+                </div>
+                <div className="right-hover absolute right-0  z-40 w-1/2 h-full transition-all duration-1000 bg-slate-500 bg-opacity-0 opacity-0 hover:bg-opacity-60 hover:opacity-100 flex items-center justify-center">
+                  <span className=" text-white justify-center items-center flex flex-col">
+                    <img
+                      src="/images/demo.svg"
+                      width={40}
+                      className="mb-3"
+                    ></img>
+                    <p>Live Demo</p>
+                  </span>
+                </div>
+                <img
+                  alt={projects[0].title}
+                  src={projects[0].src}
+                  className="rounded-3xl h-[300px] transition-all duration-500 "
+                  style={{ objectFit: "cover" }}
+                />
+              </div>
               <p className="text-2xl  mt-5 text-black">{projects[0].title}</p>
             </div>
             <div className="w-6/12  place-self-start">
-              <img
-                alt={projects[1].title}
-                src={projects[1].src}
+              <div
                 className={
-                  "rounded-3xl h-[300px] transition-all duration-500 " +
-                  (projectHover === projects[1].title
-                    ? "scale-110"
-                    : "scale-100")
+                  "relative hover:scale-110 transition-all duration-500 "
                 }
-                style={{ objectFit: "cover" }}
-                onMouseEnter={(e) => {
-                  setProjectHover(e.target.alt);
-                }}
-                onMouseLeave={() => {
-                  setProjectHover(null);
-                }}
-              />
+              >
+                <div className="left-hover absolute z-40 w-1/2 left h-full  transition-all duration-1000 bg-black bg-opacity-0 opacity-0 hover:bg-opacity-60 hover:opacity-100 flex items-center justify-center ">
+                  <span className=" text-white justify-center items-center flex flex-col">
+                    <img
+                      src="/images/github.svg"
+                      width={40}
+                      className="mb-3"
+                    ></img>
+                    <p>Github Repo</p>
+                  </span>
+                </div>
+                <div className="right-hover absolute right-0  z-40 w-1/2 h-full transition-all duration-1000 bg-slate-500 bg-opacity-0 opacity-0 hover:bg-opacity-60 hover:opacity-100 flex items-center justify-center ">
+                  <span className=" text-white justify-center items-center flex flex-col">
+                    <img
+                      src="/images/demo.svg"
+                      width={40}
+                      className="mb-3"
+                    ></img>
+                    <p>Live Demo</p>
+                  </span>
+                </div>
+                <div className="bg-slate-800 rounded-3xl">
+                  <img
+                    alt={projects[1].title}
+                    src={projects[1].src}
+                    className={
+                      "rounded-3xl h-[300px] transition-all duration-500  "
+                    }
+                    style={{ objectFit: "cover" }}
+                  />
+                </div>
+              </div>
               <p className="text-2xl mt-5 text-black">{projects[1].title}</p>
             </div>
           </div>
