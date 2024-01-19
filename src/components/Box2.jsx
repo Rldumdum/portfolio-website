@@ -2,9 +2,9 @@ import { useState } from "react";
 import "../App.css";
 const Box2 = () => {
   const [isVine, setIsVine] = useState(false);
-  const [powerUpUrl, setPowerUpUrl] = useState("/images/powerup.gif");
+  const [powerUpUrl, setPowerUpUrl] = useState("/portfolio-website/images/powerup.gif");
   const vineHandler = () => {
-    setPowerUpUrl("/images/powerup_used.png");
+    setPowerUpUrl("/portfolio-website/images/powerup_used.png");
     setIsVine(true);
   };
 

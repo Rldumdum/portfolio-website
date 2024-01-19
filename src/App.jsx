@@ -34,7 +34,7 @@ function App() {
           </div>
         </div>
         <div className="flex-1 ml-36">
-          <img src="/images/myPhoto.png" alt="RL DUMDUM" width={900} />
+          <img src="/portfolio-website/images/myPhoto.png" alt="RL DUMDUM" width={900} />
           <div className="bg-black w-full h-0.5 relative" />
           <Link
             to="projects"
@@ -257,7 +257,7 @@ function App() {
                   >
                     <span className=" text-white justify-center items-center flex flex-col">
                       <img
-                        src="/images/demo.svg"
+                        src="/portfolio-website/images/demo.svg"
                         width={40}
                         className="mb-3"
                       ></img>
@@ -268,14 +268,14 @@ function App() {
                 <div className="flex justify-center ">
                   <div className="w-10 h-10 bg-white shadow-black drop-shadow-xl rounded-full absolute z-50 bottom-2 pointer-events-none transition-all ">
                     <img
-                      src="/images/pulsatingcircle.gif"
+                      src="/portfolio-website/images/pulsatingcircle.gif"
                       className="rounded-full"
                     />
                   </div>
                   <HoverVideoPlayer
                     videoStyle={{ height: "300px", borderRadius: "1.5rem" }}
                     className="rounded-3xl transition-all duration-500"
-                    videoSrc="/video/new-year-countdown.mp4"
+                    videoSrc="/portfolio-website/video/new-year-countdown.mp4"
                     pausedOverlay={
                       <img
                         src={projects[1].src}

@@ -3,9 +3,9 @@ import "../App.css";
 const Box = () => {
   const [isMushroom, setIsMushroom] = useState(false);
   const [move, setMove] = useState(false);
-  const [powerUpUrl, setPowerUpUrl] = useState("/images/powerup.gif");
+  const [powerUpUrl, setPowerUpUrl] = useState("/portfolio-website/images/powerup.gif");
   const mushroomHandler = () => {
-    setPowerUpUrl("/images/powerup_used.png");
+    setPowerUpUrl("/portfolio-website/images/powerup_used.png");
     setIsMushroom(true);
     setTimeout(() => {
       setMove(true);
