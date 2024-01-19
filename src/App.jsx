@@ -180,7 +180,7 @@ function App() {
                   >
                     <span className=" text-white justify-center items-center flex flex-col">
                       <img
-                        src="/images/demo.svg"
+                        src="/portfolio-website/images/demo.svg"
                         width={40}
                         className="mb-3"
                       ></img>
@@ -191,7 +191,7 @@ function App() {
                 <div className="flex justify-center ">
                   <div className="w-10 h-10 bg-white shadow-black drop-shadow-xl rounded-full absolute z-50 bottom-2 pointer-events-none transition-all ">
                     <img
-                      src="/images/pulsatingcircle.gif"
+                      src="/portfolio-website/images/pulsatingcircle.gif"
                       className="rounded-full "
                     />
                   </div>
@@ -201,7 +201,7 @@ function App() {
                       borderRadius: "1.5rem",
                     }}
                     className="rounded-3xl transition-all duration-500"
-                    videoSrc="/video/memory-game.mp4"
+                    videoSrc="/portfolio-website/video/memory-game.mp4"
                     pausedOverlay={
                       <img
                         src={projects[0].src}
@@ -242,7 +242,7 @@ function App() {
                   >
                     <span className=" text-white justify-center items-center flex flex-col">
                       <img
-                        src="/images/github.svg"
+                        src="/portfolio-website/images/github.svg"
                         width={40}
                         className="mb-3"
                       ></img>

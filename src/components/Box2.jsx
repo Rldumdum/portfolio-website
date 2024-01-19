@@ -30,7 +30,7 @@ const Box2 = () => {
             }
           />
           <img
-            src="/images/vine.png"
+            src="/portfolio-website/images/vine.png"
             className={
               "absolute top-16 -z-10  " + (isVine ? "vine-clicked" : "vine")
             }

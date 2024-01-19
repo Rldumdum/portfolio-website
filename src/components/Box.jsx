@@ -53,7 +53,7 @@ const Box = () => {
             }
           />
           <img
-            src="/images/mushroom.svg"
+            src="/portfolio-website/images/mushroom.svg"
             className={
               "absolute bottom-16 -z-10  " +
               (isMushroom ? "mushroom-clicked" : "mushroom") +
