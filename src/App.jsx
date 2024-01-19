@@ -4,6 +4,8 @@ import Box from "./components/Box";
 import Box2 from "./components/Box2";
 import HoverVideoPlayer from "react-hover-video-player";
 import * as data from "./data";
+import { Link } from "react-scroll";
+import Contact from "./components/Contact";
 
 const { items, projects, languages } = data;
 
@@ -22,7 +24,7 @@ function App() {
               RL <br /> DUMDUM
             </h1>
             <h3 className="text-6xl tracking-tight text-black mt-5 w-[700px]">
-              SOFTWARE DEVELOPER
+              WEB DEVELOPER
             </h3>
             <p className="text-2xl mt-10 w-[800px] tracking-wider ">
               My aim is to use my diverse skills to assist you with your
@@ -34,9 +36,18 @@ function App() {
         <div className="flex-1 ml-36">
           <img src="/images/myPhoto.png" alt="RL DUMDUM" width={900} />
           <div className="bg-black w-full h-0.5 relative" />
-          <button className="bg-black text-white mt-10 py-6 px-0 w-80 justify-center flex ">
-            <p className=" text-1xl">View My Work</p>
-          </button>
+          <Link
+            to="projects"
+            spy={true}
+            smooth={true}
+            offset={-100}
+            duration={500}
+            className=" text-1xl"
+          >
+            <button className="bg-black text-white mt-10 py-6 px-0 w-80 justify-center flex ">
+              View My Work
+            </button>
+          </Link>
         </div>
       </div>
       <Box />
@@ -89,7 +100,8 @@ function App() {
                   behind the creation of each thing. I brought that attitude
                   with me through adulthood and now learning a lot of
                   technologies and specializing in web development. I dabble in
-                  a lot of technologies and I am always open to learning new
+                  a lot of technologies prior to programming, I do a lot of
+                  editing photos/video and I am always open to learning new
                   things until now I never get tired of it.
                 </p>
               </div>
@@ -118,9 +130,9 @@ function App() {
               >
                 <p className="text-xl  text-white leading-relaxed">
                   I went to college for 2nd year then I stopped taking BSIT, and
-                  decided to self-learn everything on a fast-faced environment. I also went to a coding boot
-                  camp and got an internship and that&apos;s where my
-                  professional coding journey begins.
+                  decided to self-learn everything on a fast-faced environment.
+                  I also went to a coding boot camp and got an internship and
+                  that&apos;s where my professional coding journey begins.
                   <span className="block mt-10 text-green-400">
                     See my resume for more details.
                   </span>
@@ -184,7 +196,10 @@ function App() {
                     />
                   </div>
                   <HoverVideoPlayer
-                    videoStyle={{ height: "300px", borderRadius: "1.5rem" }}
+                    videoStyle={{
+                      height: "300px",
+                      borderRadius: "1.5rem",
+                    }}
                     className="rounded-3xl transition-all duration-500"
                     videoSrc="/video/memory-game.mp4"
                     pausedOverlay={
@@ -291,54 +306,7 @@ function App() {
           </div>
         </div>
       </div>
-      <div className="grid justify-center">
-        <h1
-          className="text-black text-9xl mt-20 place-self-center"
-          id="contact"
-        >
-          Contact
-        </h1>
-        <p className="text-slate-500 mt-5 mb-6">
-          Please Enter your information so I can speak with you and discuss
-          about what <br />
-          solution I can provide you
-        </p>
-        <div className="bg-neutral-500 p-5 rounded-xl">
-          <div className="">
-            <form className="grid mt-5" method="POST">
-              <label htmlFor="fullname" className="text-white">
-                Full Name:
-              </label>
-              <input
-                type="text"
-                name="fullname"
-                id="fullname"
-                className="border border-black rounded"
-              />
-              <label htmlFor="email" className="text-white">
-                Email:
-              </label>
-              <input
-                type="text"
-                name="email"
-                id="email"
-                className="border border-black rounded"
-              />
-              <label htmlFor="message" className="text-white">
-                Message:
-              </label>
-              <textarea
-                type="text"
-                name="message"
-                id="message"
-                className="border border-black min-h-44 rounded"
-                placeholder="I would like to schedule an interview with you for a project xyz"
-              />
-              <button className="mt-5">Submit</button>
-            </form>
-          </div>
-        </div>
-      </div>
+      <Contact />
     </div>
   );
 }

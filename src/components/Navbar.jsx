@@ -15,13 +15,20 @@ const NavBar = () => {
         smooth={true}
         offset={0}
         duration={500}
-        className="logo"
+        className="logo cursor-pointer"
       >
         {"<RL/>"}
       </Link>
       <ul>
         <li>
-          <Link to="abte" spy={true} smooth={true} offset={-100} duration={500}>
+          <Link
+            to="abte"
+            spy={true}
+            smooth={true}
+            offset={-100}
+            duration={500}
+            className="cursor-pointer"
+          >
             ABTE
           </Link>
         </li>
@@ -32,6 +39,7 @@ const NavBar = () => {
             smooth={true}
             offset={-100}
             duration={500}
+            className="cursor-pointer"
           >
             Projects
           </Link>
@@ -43,13 +51,14 @@ const NavBar = () => {
             smooth={true}
             offset={-100}
             duration={500}
+            className="cursor-pointer"
           >
             Contact
           </Link>
         </li>
-        <li>
+        {/* <li>
           <Link>Resume</Link>
-        </li>
+        </li> */}
       </ul>
     </nav>
   );

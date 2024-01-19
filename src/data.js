@@ -5,7 +5,11 @@ export let items = [
 ];
 
 export const projects = [
-  { id: 1, src: "/images/Memory-game-mockup.png", title: "Memory Game" },
+  {
+    id: 1,
+    src: "/images/Memory-game-mockup.png",
+    title: "Memory Game",
+  },
   {
     id: 2,
     src: "/images/New-year-countdown-mockup.png",
