@@ -19,14 +19,14 @@ const Contact = () => {
       )
       .then(
         (result) => {
-          console.log(result.text);
-          console.log(form.current);
+          // console.log(result.text);
+          // console.log(form.current);
           toast.success(
             "Form Submitted!. Thank you. I'll get back to you as soon as possible"
           );
         },
         (error) => {
-          console.log(error.text);
+          // console.log(error.text);
           toast.error("Form Submission Failed");
         }
       );
@@ -76,7 +76,7 @@ const Contact = () => {
               placeholder="I would like to schedule an interview with you for a project xyz"
               required
             />
-            <button className="mt-5 bg-green-200" type="submit">
+            <button className="mt-5 bg-green-" type="submit">
               Submit
             </button>
           </form>

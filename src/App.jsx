@@ -13,7 +13,7 @@ function App() {
   const [isHover, setIsHover] = useState();
   const [opacity, setOpacity] = useState(0);
 
-  console.log(isHover);
+  // console.log(isHover);
   return (
     <div className="pb-96  " id="hero">
       <div className="hero flex max-w-16 items-center justify-center m-auto p-20 ">
