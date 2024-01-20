@@ -15,8 +15,11 @@ const Box = () => {
   };
 
   return (
-    <div className="flex mx-20 mt-10 justify-center">
-        <img src="/portfolio-website/images/powerup_used.png" className="absolute w-0 h-0"></img>
+    <div className="flex mx-20 mt-10 justify-center ">
+      <img
+        src="/portfolio-website/images/powerup_used.png"
+        className="absolute w-0 h-0"
+      ></img>
       <div className="box-bg bg-gradient-to-r from-black to-white" />
       <div className="box w-16 h-16 border-black border " />
       <div className="box w-16 h-16 border-black border " />

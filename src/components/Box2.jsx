@@ -14,7 +14,7 @@ const Box2 = () => {
         className={
           "box-bg-2 transition-all duration-1000 ease-in-out " +
           (isVine
-            ? " bg-gradient-to-r from-green-200 to-green-400 opacity-100 w-[90.5%]"
+            ? " bg-gradient-to-r from-amber-200 to-amber-400 opacity-100 w-[90.5%]"
             : " bg-gradient-to-r from-black to-white opacity-0 w-[0vw]")
         }
       />

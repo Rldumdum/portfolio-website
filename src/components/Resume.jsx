@@ -16,7 +16,7 @@ const Resume = () => {
       </RouterLink>
       <a href={resume}>
         <h1 className="bg-gray-950 text-white rounded-2xl p-5 transition-all duration-1000 cursor-pointer hover:bg-red-500 hover:text-black">
-          Resume
+          Download Resume
         </h1>
       </a>
     </section>

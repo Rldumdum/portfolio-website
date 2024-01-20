@@ -7,7 +7,6 @@ const NavBar = () => {
     var nav = document.querySelector("nav");
     nav.classList.toggle("sticky", window.scrollY > 0);
   });
-
   return (
     <nav>
       <Link

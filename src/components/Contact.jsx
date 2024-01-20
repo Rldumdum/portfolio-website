@@ -17,30 +17,34 @@ const Contact = () => {
         form.current,
         emailService.publicKey
       )
-      .then(
-        (result) => {
-          // console.log(result.text);
-          // console.log(form.current);
-          toast.success(
-            "Form Submitted!. Thank you. I'll get back to you as soon as possible"
-          );
-        },
-        (error) => {
-          // console.log(error.text);
-          toast.error("Form Submission Failed");
-        }
-      );
+      .then(() => {
+        // console.log(result.text);
+        // console.log(form.current);
+        toast.success(
+          "Form Submitted!. Thank you. I'll get back to you as soon as possible"
+        );
+      })
+      .catch((error) => {
+        // console.log(error.text);
+        toast.error("Form Submission Failed", error);
+      });
   };
 
   return (
-    <div className="grid justify-center">
+    <div className="grid justify-center ">
       <h1 className="text-black text-9xl mt-20 place-self-center" id="contact">
         Contact
       </h1>
       <p className="text-slate-500 mt-5 mb-6">
-        Interested in working together? Fill out the form below with some info
-        about
-        <br /> your project and I will get back to you as soon as I can.
+        <span>
+          Interested in working together?
+          <br />
+        </span>
+        <span>
+          Fill out the form below with some info about
+          <br />
+        </span>
+        <span>your project and I will get back to you as soon as I can.</span>
       </p>
       <div className="bg-neutral-500 p-5 rounded-xl">
         <div className="">
@@ -76,7 +80,7 @@ const Contact = () => {
               placeholder="I would like to schedule an interview with you for a project xyz"
               required
             />
-            <button className="mt-5 bg-green-" type="submit">
+            <button className="mt-5 bg-green-200" type="submit">
               Submit
             </button>
           </form>
