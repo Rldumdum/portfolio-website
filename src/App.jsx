@@ -165,7 +165,7 @@ function App() {
                   >
                     <span className=" text-white justify-center items-center flex flex-col">
                       <img
-                        src="/images/github.svg"
+                        src="/portfolio-website/images/github.svg"
                         width={40}
                         className="mb-3"
                       ></img>

@@ -3,7 +3,9 @@ import "../App.css";
 const Box = () => {
   const [isMushroom, setIsMushroom] = useState(false);
   const [move, setMove] = useState(false);
-  const [powerUpUrl, setPowerUpUrl] = useState("/portfolio-website/images/powerup.gif");
+  const [powerUpUrl, setPowerUpUrl] = useState(
+    "/portfolio-website/images/powerup.gif"
+  );
   const mushroomHandler = () => {
     setPowerUpUrl("/portfolio-website/images/powerup_used.png");
     setIsMushroom(true);
@@ -14,6 +16,7 @@ const Box = () => {
 
   return (
     <div className="flex mx-20 mt-10 justify-center">
+        <img src="/portfolio-website/images/powerup_used.png" className="absolute w-0 h-0"></img>
       <div className="box-bg bg-gradient-to-r from-black to-white" />
       <div className="box w-16 h-16 border-black border " />
       <div className="box w-16 h-16 border-black border " />

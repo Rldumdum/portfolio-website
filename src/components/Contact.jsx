@@ -52,7 +52,7 @@ const Contact = () => {
               type="text"
               name="fullname"
               id="fullname"
-              className="border border-black rounded"
+              className="border border-black bg-white rounded text-black"
               required
             />
             <label htmlFor="email" className="text-white">
@@ -62,7 +62,7 @@ const Contact = () => {
               type="text"
               name="email"
               id="email"
-              className="border border-black rounded"
+              className="border border-black rounded bg-white text-black"
               required
             />
             <label htmlFor="message" className="text-white">
@@ -72,11 +72,11 @@ const Contact = () => {
               type="text"
               name="message"
               id="message"
-              className="border border-black min-h-44 rounded"
+              className="border border-black min-h-44 rounded text-black bg-white"
               placeholder="I would like to schedule an interview with you for a project xyz"
               required
             />
-            <button className="mt-5" type="submit">
+            <button className="mt-5 bg-green-200" type="submit">
               Submit
             </button>
           </form>

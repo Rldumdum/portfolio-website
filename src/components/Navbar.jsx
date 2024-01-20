@@ -1,5 +1,6 @@
 import "../styles/navBar.css";
 import { Link } from "react-scroll";
+import { Link as RouterLink } from "react-router-dom";
 
 const NavBar = () => {
   window.addEventListener("scroll", () => {
@@ -56,9 +57,9 @@ const NavBar = () => {
             Contact
           </Link>
         </li>
-        {/* <li>
-          <Link>Resume</Link>
-        </li> */}
+        <li>
+          <RouterLink to="/portfolio-website/resume/">Resume</RouterLink>
+        </li>
       </ul>
     </nav>
   );
