@@ -2,13 +2,13 @@ import { useState } from "react";
 import "./App.css";
 import Box from "./components/Box";
 import Box2 from "./components/Box2";
-import HoverVideoPlayer from "react-hover-video-player";
 import * as data from "./data";
 import { Link } from "react-scroll";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import Projects from "./components/Projects";
 
-const { items, projects, languages } = data;
+const { items, languages } = data;
 
 function App() {
   const [isHover, setIsHover] = useState();
@@ -184,173 +184,14 @@ function App() {
                   </span>
                 </p>
               </div>
-            ) : (
-              ""
-            )}
+            ) : null}
           </li>
         ))}
       </ul>
       <div>
         {/* projects */}
         <Box2 />
-        <div className="block text-center justify-center">
-          <h1 className="text-black w-full mb-16 text-9xl" id="projects">
-            Projects
-          </h1>
-          <div className="grid md:grid-cols-2  gap-10 justify-center items-center place-items-center w-full">
-            <div className="w-full md:w-6/12 place-self-end ">
-              <div
-                className={
-                  "relative hover:scale-110  transition-all duration-500 "
-                }
-              >
-                <div className="left-hover absolute z-40 w-1/2 left h-full cursor-pointer  transition-all duration-1000 bg-black bg-opacity-0 opacity-0 hover:bg-opacity-60 hover:opacity-100 flex items-center justify-center ">
-                  <a
-                    href="https://github.com/Rldumdum/memory-game"
-                    className="p-12"
-                  >
-                    <span className=" text-white justify-center items-center flex flex-col">
-                      <img
-                        src="/portfolio-website/images/github.svg"
-                        width={40}
-                        className="mb-3"
-                      ></img>
-                      <p>Github Repo</p>
-                    </span>
-                  </a>
-                </div>
-                <div className="right-hover absolute right-0  z-40 w-1/2 h-full cursor-pointer transition-all duration-1000 bg-slate-500 bg-opacity-0 opacity-0 hover:bg-opacity-60 hover:opacity-100 flex items-center justify-center">
-                  <a
-                    href="https://rldumdum.github.io/memory-game/"
-                    className="p-12"
-                  >
-                    <span className=" text-white justify-center items-center flex flex-col">
-                      <img
-                        src="/portfolio-website/images/demo.svg"
-                        width={40}
-                        className="mb-3"
-                      ></img>
-                      <p>Live Demo</p>
-                    </span>
-                  </a>
-                </div>
-                <div className="flex justify-center ">
-                  <div className="w-10 h-10 bg-white shadow-black drop-shadow-xl rounded-full absolute z-50 bottom-2 pointer-events-none transition-all ">
-                    <img
-                      src="/portfolio-website/images/pulsatingcircle.gif"
-                      className="rounded-full "
-                    />
-                  </div>
-                  <HoverVideoPlayer
-                    videoStyle={{
-                      height: "300px",
-                      borderRadius: "1.5rem",
-                    }}
-                    className="rounded-3xl transition-all duration-500"
-                    videoSrc="/portfolio-website/video/memory-game.mp4"
-                    pausedOverlay={
-                      <img
-                        src={projects[0].src}
-                        alt=""
-                        style={{
-                          // Make the image expand to cover the video's dimensions
-                          width: "100%",
-                          height: "100%",
-                          objectFit: "cover",
-                          borderRadius: "1.5rem",
-                        }}
-                      />
-                    }
-                    pausedOverlayWrapperStyle={{
-                      borderRadius: "1.5rem",
-                    }}
-                    objectFit="cover"
-                    loadingOverlay={
-                      <div className="loading-overlay">
-                        <div className="loading-spinner" />
-                      </div>
-                    }
-                  ></HoverVideoPlayer>
-                </div>
-              </div>
-              <p className="text-2xl  mt-5 text-black">{projects[0].title}</p>
-            </div>
-            <div className="w-full md:w-6/12  place-self-start">
-              <div
-                className={
-                  "relative hover:scale-110 transition-all duration-500 "
-                }
-              >
-                <div className="left-hover absolute z-40 w-1/2 left h-full cursor-pointer  transition-all duration-1000 bg-black bg-opacity-0 opacity-0 hover:bg-opacity-60 hover:opacity-100 flex items-center justify-center ">
-                  <a
-                    href="https://github.com/Rldumdum/new-year-countdown"
-                    className="p-12"
-                  >
-                    <span className=" text-white justify-center items-center flex flex-col">
-                      <img
-                        src="/portfolio-website/images/github.svg"
-                        width={40}
-                        className="mb-3"
-                      ></img>
-                      <p>Github Repo</p>
-                    </span>
-                  </a>
-                </div>
-                <div className="right-hover absolute right-0  z-40 w-1/2 h-full cursor-pointer transition-all duration-1000 bg-slate-500 bg-opacity-0 opacity-0 hover:bg-opacity-60 hover:opacity-100 flex items-center justify-center ">
-                  <a
-                    href="https://thecountdown2024.vercel.app/"
-                    className="p-12"
-                  >
-                    <span className=" text-white justify-center items-center flex flex-col">
-                      <img
-                        src="/portfolio-website/images/demo.svg"
-                        width={40}
-                        className="mb-3"
-                      ></img>
-                      <p>Live Demo</p>
-                    </span>
-                  </a>
-                </div>
-                <div className="flex justify-center ">
-                  <div className="w-10 h-10 bg-white shadow-black drop-shadow-xl rounded-full absolute z-50 bottom-2 pointer-events-none transition-all ">
-                    <img
-                      src="/portfolio-website/images/pulsatingcircle.gif"
-                      className="rounded-full"
-                    />
-                  </div>
-                  <HoverVideoPlayer
-                    videoStyle={{ height: "300px", borderRadius: "1.5rem" }}
-                    className="rounded-3xl transition-all duration-500"
-                    videoSrc="/portfolio-website/video/new-year-countdown.mp4"
-                    pausedOverlay={
-                      <img
-                        src={projects[1].src}
-                        alt=""
-                        style={{
-                          // Make the image expand to cover the video's dimensions
-                          width: "100%",
-                          height: "100%",
-                          objectFit: "cover",
-                          borderRadius: "1.5rem",
-                        }}
-                      />
-                    }
-                    pausedOverlayWrapperStyle={{
-                      borderRadius: "1.5rem",
-                    }}
-                    objectFit="cover"
-                    loadingOverlay={
-                      <div className="loading-overlay">
-                        <div className="loading-spinner" />
-                      </div>
-                    }
-                  />
-                </div>
-              </div>
-              <p className="text-2xl mt-5 text-black">{projects[1].title}</p>
-            </div>
-          </div>
-        </div>
+        <Projects />
       </div>
       <Contact />
       <Footer />
