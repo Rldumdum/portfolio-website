@@ -1,5 +1,6 @@
 import HoverVideoPlayer from "react-hover-video-player";
 import * as data from "../data";
+import "../App.css";
 
 const { projects } = data;
 
@@ -9,14 +10,9 @@ const Projects = () => {
       <h1 className="text-black w-full mb-16 text-9xl" id="projects">
         Projects
       </h1>
-      <div className="grid md:grid-cols-2  gap-10 justify-center items-center place-items-center w-full">
+      <div className="grid md:grid-cols-2 justify-center gap-10 items-center place-items-center w-full">
         {projects.map((project) => (
-          <div
-            key={project.id}
-            className={`w-full md:w-6/12 place-self-${
-              project.id % 2 === 0 ? "start" : "end"
-            } `}
-          >
+          <div key={project.id} className={`w-full md:w-6/12 ${project.id % 2 === 0 ? "place-self-start" : "place-self-end"}`}>
             <div
               className={
                 "relative hover:scale-110 transition-all duration-500 "
@@ -57,6 +53,8 @@ const Projects = () => {
                   videoStyle={{
                     height: "300px",
                     borderRadius: "1.5rem",
+                    width:'500px'
+                    
                   }}
                   className="rounded-3xl transition-all duration-500"
                   videoSrc={project.videoSrc}

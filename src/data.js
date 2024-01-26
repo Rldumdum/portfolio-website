@@ -21,6 +21,14 @@ export const projects = [
     url: "https://github.com/Rldumdum/new-year-countdown",
     link: "https://thecountdown2024.vercel.app",
   },
+  {
+    id: 3,
+    src: "/portfolio-website/images/partsman_logo.png",
+    videoSrc: "/portfolio-website/video/partsman_logo.mp4",
+    title: "Partsman Mobile App",
+    url: "",
+    link: "https://partsman.ph/",
+  },
 ];
 
 export const languages = [
