@@ -4,5 +4,5 @@ export const ContactData = {
     templateID: "template_6a6qtfb",
     publicKey: "BQaoc4ikFAsfCaGYo",
   },
-  resume:'https://drive.google.com/file/d/1FjbgCWiwiLhKibqj3g_ItpSB2ffGQq2j/view?usp=drive_link'
+  resume:'https://drive.google.com/file/d/1QioFkgz3n7rXoi5tNHDxwxUnwMfoFrhC/view?usp=drive_link'
 };
