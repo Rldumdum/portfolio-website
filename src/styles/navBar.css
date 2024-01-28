@@ -58,3 +58,9 @@ nav.sticky ul li a {
     margin: 0 auto;
   }
 }
+
+.drop-down {
+  z-index: 9999999999;
+  margin:0;
+  padding:0;
+}
