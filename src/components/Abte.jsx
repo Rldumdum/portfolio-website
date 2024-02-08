@@ -91,10 +91,12 @@ const Abte = () => {
               className={`xl:w-5/12 2xl:w-6/12 h-72 mt-10  absolute transition-all cursor-crosshair duration-1000 delay-150 ease-in-out opacity-${opacity} `}
             >
               <p className="text-xl mx-12 xl:mx-0  text-white leading-relaxed">
-                I went to college for 2nd year then I stopped taking BSIT, and
-                decided to self-learn everything on a fast-faced environment. I
-                also went to a coding boot camp and got an internship and
-                that&apos;s where my professional coding journey begins.
+                Sept 2023 - Jan 2024 ADukasyon Mobile App Developer Intern
+                <p>Sept 2023 - Jan 2024 ADukasyon NextJs Fullstack Bootcamp</p>
+                <p>
+                  2021 - 2022 Bachelor of Science In Information and Technology
+                  Holy Cross of Davao College (undergraduate)
+                </p>
                 <span className="block mt-10 text-green-400">
                   See my resume for more details.
                 </span>
