@@ -29,6 +29,14 @@ export const projects = [
     url: "",
     link: "https://partsman.ph/",
   },
+  {
+    id: 4,
+    src: "/portfolio-website/images/EZLoadConnections.png",
+    videoSrc: "/portfolio-website/video/ezload-connections.mp4",
+    title: "EZLoadConnections Kiosk",
+    url: "",
+    link: "",
+  },
 ];
 
 export const languages = [
